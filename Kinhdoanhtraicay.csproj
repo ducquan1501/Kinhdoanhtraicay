@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="Views\Product\.vs\VSWorkspaceState.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Views\Product\.vs\Product\FileContentIndex\merges\" />
+    <Folder Include="Views\Product\.vs\Product\v17\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Views\Home\Admin.cshtml" />
+    <None Include="Views\Home\Privacy.cshtml" />
+    <None Include="Views\Product\.vs\Product\config\applicationhost.config" />
+    <None Include="Views\Product\.vs\Product\FileContentIndex\17d70e34-c36b-4e4d-b0a4-17365d54b719.vsidx" />
+    <None Include="Views\Product\.vs\Product\FileContentIndex\read.lock" />
+    <None Include="Views\Product\.vs\slnx.sqlite" />
+    <None Include="Views\Product\Create.cshtml" />
+    <None Include="Views\Product\Edit.cshtml" />
+    <None Include="Views\Product\Index.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.16" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.16">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.13" />
+  </ItemGroup>
+
+</Project>

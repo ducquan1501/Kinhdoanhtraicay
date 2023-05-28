@@ -1,0 +1,100 @@
+﻿@{
+    Layout = null;
+}
+@model List<Kinhdoanhtraicay.Models.Customer>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+    }
+
+    h1 {
+        margin: 0;
+    }
+
+    nav {
+        background-color: #f5f5f5;
+        padding: 10px;
+        text-align: center;
+    }
+
+        nav a {
+            color: #333;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+    h2 {
+        text-align: center;
+    }
+    table
+    {
+        margin-right:auto;
+        margin-left:auto;
+        border-collapse: collapse;
+        width: 80%;
+    }
+
+    th, td {
+        padding: 8px;
+        text-align: left;
+        border: 1px solid black;
+    }
+    th{
+        text-align:center;
+    }
+    .customer-id-column
+    {
+        width:20px;
+    }
+</style>
+<body>
+    <header>
+        <h1>Quản lý hệ thống</h1>
+    </header>
+    <nav>
+        <a href="@Url.Action("Index", "Product")">Danh sách sản phẩm</a>
+        <a href="@Url.Action("Index", "Customer")">Người dùng</a>
+        <a href="@Url.Action("Index", "Orders")">Đơn hàng</a>
+    </nav>
+    <h2>Danh sách khách hàng</h2>
+    <table>
+        <thead>
+            <tr>
+                <th class="customer-id-column">Mã khách hàng</th>
+                <th>Tên khách hàng</th>
+                <th>Email</th>
+                <th>Số điện thoại</th>
+                <th>Địa chỉ</th>
+                <th>Tình trạng</th>
+                <th>Quốc gia</th>
+                <th>Ngày tạo</th>
+                <th>Ngày cập nhật</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var customers in Model)
+            {
+                <tr>
+                    <td>@customers.CustomerId</td>
+                    <td>@customers.CustomerName</td>
+                    <td>@customers.Email</td>
+                    <td>@customers.PhoneNumber</td>
+                    <td>@customers.Address</td>
+                    <td>@customers.State</td>
+                    <td>@customers.Country</td>
+                    <td>@customers.CreatedAt</td>
+                    <td>@customers.UpdatedAt</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>

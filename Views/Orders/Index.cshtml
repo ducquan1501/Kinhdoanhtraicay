@@ -1,0 +1,92 @@
+﻿@{
+    Layout = null;
+}
+@model List<Kinhdoanhtraicay.Models.Order>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+    }
+
+    h1 {
+        margin: 0;
+    }
+
+    nav {
+        background-color: #f5f5f5;
+        padding: 10px;
+        text-align: center;
+    }
+
+        nav a {
+            color: #333;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+    h2 {
+        text-align: center;
+    }
+
+    table {
+        margin-left:auto;
+        margin-right:auto;
+        border-collapse: collapse;
+        width: 60%;
+    }
+
+    th, td {
+        padding: 8px;
+        text-align: center;
+        border: 1px solid black;
+    }
+    .customer-id-column,.order-id-column {
+        width: 20px;
+    }
+    .orderdate-column{
+        width: 70px;
+    }
+    .price-column{
+        width: 50px;
+    }
+</style>
+<body>
+    <header>
+        <h1>Quản lý hệ thống</h1>
+    </header>
+    <nav>
+        <a href="@Url.Action("Index", "Product")">Danh sách sản phẩm</a>
+        <a href="@Url.Action("Index", "Customer")">Người dùng</a>
+        <a href="@Url.Action("Index", "Orders")">Thống kê</a>
+    </nav>
+    <h2>Danh sách hóa đơn</h2>
+    <table>
+        <thead>
+            <tr>
+                <th class="order-id-column">Mã đơn</th>
+                <th class="customer-id-column">Mã khách hàng</th>
+                <th class="orderdate-column">Ngày đặt hàng</th>
+                <th class="price-column">Tổng tiền</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var order in Model)
+            {
+                <tr>
+                    <td>@order.OrderId</td>
+                    <td>@order.CustomerId</td>
+                    <td>@order.OrderDate</td>
+                    <td>@order.TotalPrice</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>

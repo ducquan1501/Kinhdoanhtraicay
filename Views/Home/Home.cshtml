@@ -1,0 +1,136 @@
+﻿@{
+    Layout = null; // Không sử dụng layout chung
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Trang chủ - Cửa hàng trái cây</title>
+    <style>
+        .header {
+            background-color: #333;
+            padding: 20px;
+        }
+
+        .header__container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header__title {
+            color: white;
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .header__logo-image {
+            display:flex;
+            text-align:center;
+            width: 50px;
+            height: 50px;
+        }
+
+        .header__navigation {
+            background-color: #4C4C6D;
+            padding: 10px 0;
+            margin-top:auto;
+        }
+
+        .header__menu {
+            list-style-type: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+            justify-content: center;
+        }
+
+        .header__menu-item {
+            margin-right: 20px;
+        }
+
+        .header__menu-link {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-family: Arial;
+        }
+
+        .header__actions {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .header__login {
+            color: white;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+
+        .header__cart-icon {
+            width: 20px;
+            height: 20px;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+
+
+        h1 {
+            color: #333;
+        }
+
+        nav {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+            nav a {
+                color: #fff;
+                text-decoration: none;
+                margin: 0 10px;
+            }
+
+        main {
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #f5f5f5;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header__container">
+            <div class="header__logo">
+                <img src="~/Image/Logo/logo.png" alt="Logo" class="header__logo-image">
+            </div>
+        </div>
+        <div class="header__actions">
+            <a href="#" class="header__login">Đăng nhập</a>
+            <a href="#" class="header__cart">
+                <img src="cart_icon.png" alt="Giỏ hàng" class="header__cart-icon">
+            </a>
+        </div>
+        <nav class="header__navigation">
+            <ul class="header__menu">
+                <li class="header__menu-item"><a href="#" class="header__menu-link">Trang chủ</a></li>
+                <li class="header__menu-item"><a href="#" class="header__menu-link">Sản phẩm</a></li>
+                <li class="header__menu-item"><a href="#" class="header__menu-link">Tin tức</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Chào mừng đến với cửa hàng trái cây</h2>
+        <p>Chúng tôi cung cấp đa dạng các loại trái cây tươi ngon, chất lượng cao.</p>
+        <p>Hãy khám phá và đặt hàng ngay!</p>
+    </main>
+    <footer>
+        <p>© 2023 Cửa hàng trái cây. All rights reserved.</p>
+    </footer>
+</body>
+</html>
